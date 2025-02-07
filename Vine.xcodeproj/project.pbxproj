@@ -199,7 +199,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C4EC2DD82D528EBA009FA238 /* Build configuration list for PBXProject "Teste-SWIFT" */;
+			buildConfigurationList = C4EC2DD82D528EBA009FA238 /* Build configuration list for PBXProject "Vine" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -532,7 +532,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C4EC2DD82D528EBA009FA238 /* Build configuration list for PBXProject "Teste-SWIFT" */ = {
+		C4EC2DD82D528EBA009FA238 /* Build configuration list for PBXProject "Vine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C4EC2E092D528EBB009FA238 /* Debug */,
