@@ -18,36 +18,6 @@
             endingLineNumber = "11"
             landmarkName = "ViewController"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "A90BE686-2E58-4C8E-8F4F-D53C72592F8E - 596f2566f1a65c86"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Teste_SWIFT.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Teste_SWIFT.ViewController"
-                  moduleName = "Teste-SWIFT.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/izabourazevedo/Desktop/Test_UIKIT/Teste-SWIFT/Teste-SWIFT/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13">
-               </Location>
-               <Location
-                  uuid = "A90BE686-2E58-4C8E-8F4F-D53C72592F8E - f69e648c61406223"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Teste_SWIFT.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Teste_SWIFT.ViewController&gt;"
-                  moduleName = "Teste-SWIFT.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/izabourazevedo/Desktop/Test_UIKIT/Teste-SWIFT/Teste-SWIFT/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
