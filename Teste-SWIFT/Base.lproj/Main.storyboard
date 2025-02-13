@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rab-Mx-G0y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pAJ-G3-2BJ">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -32,7 +32,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goE-Zo-qQu">
                                 <rect key="frame" x="21.666666666666657" y="565.66666666666663" width="387" height="34"/>
-                                <color key="tintColor" red="0.028026491403579712" green="0.73413211107254028" blue="0.97976356744766235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.31372550129999999" green="0.69411766529999996" blue="0.54901963470000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Log In">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
@@ -51,7 +51,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZzI-k5-Sue">
                                 <rect key="frame" x="236.66666666666663" y="498.66666666666674" width="172" height="28"/>
-                                <color key="tintColor" red="0.028026491403579712" green="0.73413211107254028" blue="0.97976356744766235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.31372550129999999" green="0.69411766529999996" blue="0.54901963470000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Esqueçeu sua senha?">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="11"/>
@@ -92,12 +92,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3346" y="3109"/>
+            <point key="canvasLocation" x="791" y="733"/>
         </scene>
         <!--Community View-->
         <scene sceneID="FFd-08-J50">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yz8-lR-dJ3" sceneMemberID="firstResponder"/>
                 <viewController id="Rab-Mx-G0y" customClass="CommunityView" customModule="Teste_SWIFT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CG8-X5-wad">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
@@ -150,7 +149,7 @@
                                         <size key="customSize" width="144" height="177"/>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rr7-OT-qDA">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rr7-OT-qDA" customClass="CommunityHeaderViewCollectionReusableView" customModule="Teste_SWIFT" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="430" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
@@ -174,101 +173,9 @@
                         <outlet property="CommuinityCollectionView" destination="dlK-5X-B0O" id="xNW-ll-UQ5"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yz8-lR-dJ3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3953" y="2379"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="SXo-25-zSg">
-            <objects>
-                <viewController id="yFm-lG-gJs" customClass="ProfileUserView" customModule="Teste_SWIFT" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mAk-WY-oNv">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" axis="vertical" distribution="equalSpacing" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="4v6-0r-xMF">
-                                <rect key="frame" x="122" y="661" width="135" height="30"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DCC-Yg-SE2">
-                                        <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="39" verticalHuggingPriority="40" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" image="vine 1" translatesAutoresizingMaskIntoConstraints="NO" id="cZs-gX-r4g">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IzabourAzevedo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aD-04-qUN">
-                                                <rect key="frame" x="38" y="7.333333333333333" width="97" height="15.666666666666668"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qTi-i4-MZx">
-                                <rect key="frame" x="362" y="364" width="47.666666666666686" height="157"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k12-Yv-ynW">
-                                        <rect key="frame" x="0.0" y="0.0" width="47.666666666666664" height="47"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large" weight="medium">
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                            </preferredSymbolConfiguration>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYO-ZI-PNK">
-                                        <rect key="frame" x="0.0" y="55" width="47.666666666666664" height="47"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <imageReference key="image" image="bubble.right" catalog="system" symbolScale="default"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                            </preferredSymbolConfiguration>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpL-a5-7JH">
-                                        <rect key="frame" x="0.0" y="110" width="47.666666666666664" height="47"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="47" id="nqN-fJ-eAt"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <imageReference key="image" image="paperplane" catalog="system" symbolScale="large"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large">
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                            </preferredSymbolConfiguration>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" fixedFrame="YES" text="Apresentação do grammy 2025, Doechii ganhadora de melhor album rap" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YEg-Pe-oPX">
-                                <rect key="frame" x="122" y="454" width="135" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="296" placeholderIntrinsicHeight="34.333333333333343" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3h-yf-aid">
-                                <rect key="frame" x="122" y="512" width="135" height="34.333333333333343"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" image="music.note" catalog="system" title=" Audio - denial is a River - Doechii">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleCaption1"/>
-                                </buttonConfiguration>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="s1k-QV-7jB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="LsX-6I-ebr"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dKd-6J-olh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2806" y="2522"/>
+            <point key="canvasLocation" x="1487" y="1492"/>
         </scene>
         <!--varieadedes-->
         <scene sceneID="b48-A6-G1j">
@@ -340,7 +247,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" ambiguous="YES" text="Apresentação do grammy 2025, Doechii ganhadora de melhor album rap" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-xQ-u5b">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" text="Apresentação do grammy 2025, Doechii ganhadora de melhor album rap" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-xQ-u5b">
                                         <rect key="frame" x="0.0" y="41" width="312" height="50"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -354,6 +261,9 @@
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="dbS-xQ-u5b" firstAttribute="top" secondItem="x6d-GL-hxX" secondAttribute="bottom" constant="11" id="K2j-QH-pzd"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yjO-EJ-ImF"/>
@@ -373,39 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MY3-bs-l5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5113" y="2379"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="hE1-xj-Mjg">
-            <objects>
-                <viewController id="qcn-hc-OvG" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Hwa-1l-L9a">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Ixo-0j-DnG"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="plus" catalog="system" id="g3X-M7-1Yv"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4cr-nA-0J8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2807" y="1792"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="us6-8a-pu4">
-            <objects>
-                <viewController id="DRt-MX-QNR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="htu-nN-cqu">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="rnf-8y-1lX"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="pbX-Kg-KqZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="631-O9-Dgt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1761" y="2912"/>
+            <point key="canvasLocation" x="5939" y="1741"/>
         </scene>
         <!--Recording View-->
         <scene sceneID="DUq-5H-TXJ">
@@ -433,10 +311,10 @@
             </objects>
             <point key="canvasLocation" x="1487.4418604651162" y="733.26180257510737"/>
         </scene>
-        <!--View Controller-->
+        <!--Upload View-->
         <scene sceneID="aff-qD-tpS">
             <objects>
-                <viewController id="qlQ-ga-EBU" sceneMemberID="viewController">
+                <viewController id="qlQ-ga-EBU" customClass="UploadView" customModule="Teste_SWIFT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EQl-cs-gJz">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -532,7 +410,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mXw-Hv-eKR">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mXw-Hv-eKR" customClass="ProfileCollectionCell" customModule="Teste_SWIFT" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NEg-W8-k9j">
@@ -541,7 +419,7 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TgA-Jz-N5M" customClass="CommunityHeaderViewCollectionReusableView" customModule="Teste_SWIFT" customModuleProvider="target">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TgA-Jz-N5M" customClass="ProfileHeaderView" customModule="Teste_SWIFT" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="430" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
@@ -556,10 +434,13 @@
                             <constraint firstItem="HCZ-fm-jg6" firstAttribute="top" secondItem="iOY-6i-Y09" secondAttribute="top" id="mkG-2D-gS0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="profileCollectionView" destination="HCZ-fm-jg6" id="H3d-IM-Rit"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lat-qd-t3P" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4313" y="3109"/>
+            <point key="canvasLocation" x="2820" y="733"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ty2-ZJ-bKa">
@@ -577,7 +458,115 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="408-ws-0mz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3248" y="2379"/>
+            <point key="canvasLocation" x="819" y="1492"/>
+        </scene>
+        <!--varieadedes-->
+        <scene sceneID="9SB-j3-C2T">
+            <objects>
+                <viewController id="EJ4-5r-p5w" customClass="VineVideoView" customModule="Teste_SWIFT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pt7-Kq-Omu">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Ju-R6-Bum">
+                                <rect key="frame" x="16" y="62" width="49.666666666666686" height="34.333333333333343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RRc-ET-H7C">
+                                <rect key="frame" x="366.33333333333331" y="348" width="47.666666666666686" height="157"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldl-kg-sZe">
+                                        <rect key="frame" x="0.0" y="0.0" width="47.666666666666664" height="47"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large" weight="medium">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            </preferredSymbolConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jST-Yz-F7V">
+                                        <rect key="frame" x="0.0" y="55" width="47.666666666666664" height="47"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="bubble.right" catalog="system" symbolScale="default"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            </preferredSymbolConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zox-zO-1Iv">
+                                        <rect key="frame" x="0.0" y="110" width="47.666666666666664" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="06I-FK-XwY"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="paperplane" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            </preferredSymbolConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Ose-Z2-38g">
+                                <rect key="frame" x="20" y="678" width="312" height="136.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4l4-iZ-AqN">
+                                        <rect key="frame" x="0.0" y="0.0" width="312" height="30"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="39" verticalHuggingPriority="40" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" image="vine 1" translatesAutoresizingMaskIntoConstraints="NO" id="jbA-UJ-pxg">
+                                                <rect key="frame" x="0.0" y="0.0" width="69.333333333333329" height="30"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IzabourAzevedo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqx-ow-xgv">
+                                                <rect key="frame" x="77.333333333333329" y="7.3333333333333703" width="234.66666666666669" height="15.666666666666664"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" text="Apresentação do grammy 2025, Doechii ganhadora de melhor album rap" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uzG-qp-RH8">
+                                        <rect key="frame" x="0.0" y="41" width="312" height="50"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="296" placeholderIntrinsicHeight="34.333333333333343" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0N-RA-9zf">
+                                        <rect key="frame" x="0.0" y="102" width="312" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" image="music.note" catalog="system" title=" Audio - denial is a River - Doechii">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleCaption1"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="uzG-qp-RH8" firstAttribute="top" secondItem="4l4-iZ-AqN" secondAttribute="bottom" constant="11" id="5T4-cF-AcW"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hgE-3W-DsK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hgE-3W-DsK" firstAttribute="trailing" secondItem="Ose-Z2-38g" secondAttribute="trailing" constant="98" id="4Bg-yV-niw"/>
+                            <constraint firstItem="Ose-Z2-38g" firstAttribute="leading" secondItem="hgE-3W-DsK" secondAttribute="leading" constant="20" id="HdJ-xN-Jq9"/>
+                            <constraint firstItem="RRc-ET-H7C" firstAttribute="centerY" secondItem="Pt7-Kq-Omu" secondAttribute="centerY" constant="-39.5" id="Xp8-Vz-asx"/>
+                            <constraint firstItem="hgE-3W-DsK" firstAttribute="trailing" secondItem="RRc-ET-H7C" secondAttribute="trailing" constant="16" id="etJ-AD-Ka5"/>
+                            <constraint firstItem="Ose-Z2-38g" firstAttribute="top" secondItem="Pt7-Kq-Omu" secondAttribute="top" constant="678" id="f2R-uu-iG7"/>
+                            <constraint firstItem="hgE-3W-DsK" firstAttribute="bottom" secondItem="Ose-Z2-38g" secondAttribute="bottom" constant="83.666666666666629" id="zLM-PT-bGQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="varieadedes" leftItemsSupplementBackButton="YES" id="NjV-X7-it6">
+                        <barButtonItem key="backBarButtonItem" title="Community " id="siU-0E-X8L"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l4b-kN-kZc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6633" y="1741"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -592,7 +581,6 @@
         <image name="paperplane" catalog="system" width="128" height="119"/>
         <image name="pencil.line" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="speaker.wave.2.fill" catalog="system" width="128" height="88"/>
         <image name="vine" width="842" height="377"/>
         <image name="vine 1" width="146" height="146"/>
