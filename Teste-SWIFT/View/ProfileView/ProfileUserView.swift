@@ -23,6 +23,8 @@ class ProfileUserView: UIViewController, UICollectionViewDelegate, UICollectionV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         profileCollectionView.delegate = self
         profileCollectionView.dataSource = self
 
@@ -38,8 +40,9 @@ class ProfileUserView: UIViewController, UICollectionViewDelegate, UICollectionV
         layout.minimumLineSpacing = 2
         let width = (view.frame.size.width - 4) / 3
         layout.itemSize = CGSize(width: width, height: width)
-        layout.headerReferenceSize = CGSize(width: view.frame.size.width, height: 200)
         profileCollectionView.collectionViewLayout = layout
+        
+        
     }
 
  
@@ -49,12 +52,15 @@ class ProfileUserView: UIViewController, UICollectionViewDelegate, UICollectionV
             header.MyPhotoUser.image = UIImage(named: "vine 1")
             header.nameLabel.text = "UserName"
             header.usernameLabel.text = "@userName"
-            header.postsCountLabel.text = "20 Post"
-            header.communitiesCountLabel.text = "40 Communities"
-            header.followersCountLabel.text = "10 Followers"
+            header.postsCountLabel.text = "20Post"
+            header.communitiesCountLabel.text = "40Communities"
+            header.followersCountLabel.text = "10Followers"
             header.followButton.backgroundColor = .systemBlue
             header.followButton.layer.cornerRadius = 5
             header.followButton.setTitleColor(.white, for: .normal)
+            header.followButton.setTitle("Follow", for: .normal)
+
+            
             return header
         }
         return UICollectionReusableView()
@@ -62,6 +68,7 @@ class ProfileUserView: UIViewController, UICollectionViewDelegate, UICollectionV
 
   
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 200)
+        return CGSize(width: collectionView.frame.width,
+                      height: collectionView.frame.width / 3)
     }
 }
