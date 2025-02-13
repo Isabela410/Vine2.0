@@ -7,7 +7,7 @@
 import UIKit
 
 class ProfileUserView: UIViewController {
-    override func viewDidLoad() {
+    override func viewDidLoad() {//tableview.delagete=self, //data
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
