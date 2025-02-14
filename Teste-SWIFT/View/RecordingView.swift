@@ -100,13 +100,17 @@ class RecordingView: UIViewController, AVCapturePhotoCaptureDelegate {
         guard !isRecording else { return }
         isRecording = true
         
+        // Reset only if we've reached max duration
+        if recordingTime >= 6.0 {
+            recordingTime = 0.0
+            BarrinhaCarregamento.progress = 0.0
+        }
+        
+        // Start new recording session
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let fileUrl = paths[0].appendingPathComponent("video.mp4")
-        try? FileManager.default.removeItem(at: fileUrl)
+        let fileUrl = paths[0].appendingPathComponent("video-\(Date().timeIntervalSince1970).mp4")
         movieOutput.startRecording(to: fileUrl, recordingDelegate: self)
         
-        recordingTime = 0.0
-        BarrinhaCarregamento.progress = 0.0
         startTimer()
     }
     
@@ -126,39 +130,39 @@ class RecordingView: UIViewController, AVCapturePhotoCaptureDelegate {
         startRecording()
     }
     
-    // Add touch tracking property
-        private var isRecording = false
-        
-        override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-            stopRecording()
-        }
-        
-        override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-            stopRecording()
-        }
-        
-        private func stopRecording() {
-            guard isRecording else { return }
-            isRecording = false
+    private var isRecording = false
+    
+    private func startTimer() {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
             
-            movieOutput.stopRecording()
-            timer?.invalidate()
-            timer = nil
-        }
-        
-        private func startTimer() {
-            timer?.invalidate()
-            timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
-                guard let self = self else { return }
-                
-                self.recordingTime += 0.1
-                self.BarrinhaCarregamento.progress = self.recordingTime / 6.0
-                
-                if self.recordingTime >= 6.0 {
-                    self.stopRecording()
-                }
+            self.recordingTime += 0.1
+            self.BarrinhaCarregamento.progress = self.recordingTime / 6.0
+            
+            if self.recordingTime >= 6.0 {
+                self.stopRecording()
+                self.recordingTime = 0.0  // Full reset only at completion
+                self.BarrinhaCarregamento.progress = 0.0
             }
         }
+    }
+    
+    private func stopRecording() {
+        guard isRecording else { return }
+        isRecording = false
+        movieOutput.stopRecording()
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        stopRecording()
+    }
+    
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        stopRecording()
+    }
 }
 
 extension RecordingView: AVCaptureFileOutputRecordingDelegate {
