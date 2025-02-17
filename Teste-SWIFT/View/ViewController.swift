@@ -10,17 +10,20 @@ import UIKit
 class ViewController: UIViewController {
     
     
-    @IBOutlet weak var passwordEmpty: UITextField!
-    @IBOutlet weak var closeOpen: UIButton!
+    @IBOutlet weak var VineLogo: UIImageView!
+    @IBOutlet weak var EmailUsuario: UITextField!
+    @IBOutlet weak var SenhaUsuario: UITextField!
+    @IBOutlet weak var VerSenhaBotao: UIButton!
+    @IBOutlet weak var EsqueceuSenhaBotao: UIButton!
+    @IBOutlet weak var LogInBotao: UIButton!
+    
     @IBAction func buttonEye(_ sender: Any) {
-        passwordEmpty.isSecureTextEntry.toggle()
-        _ = passwordEmpty.isSecureTextEntry ? "eye.slash" : "eye.fill"
+        SenhaUsuario.isSecureTextEntry.toggle()
+        _ = SenhaUsuario.isSecureTextEntry ? "eye.slash" : "eye.fill"
     }
+    
 @objc func buttonCloseOpen(_ sender: Any) {
-            
     }
-        
-        
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
@@ -28,3 +31,7 @@ class ViewController: UIViewController {
         
     }
 //
+
+#Preview{
+    UIStoryboard(name: "Main", bundle: .main).instantiateViewController(identifier: "LoginViewController")
+}
