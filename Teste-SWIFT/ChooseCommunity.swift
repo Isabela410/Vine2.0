@@ -6,3 +6,15 @@
 //
 
 import Foundation
+import UIKit
+
+class ChooseCommunity: UIViewController {
+    
+    @IBOutlet weak var SearchCommunity: UISearchBar!
+    @IBOutlet weak var ChooseCommunity: UICollectionView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
+}

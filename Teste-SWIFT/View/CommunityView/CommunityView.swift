@@ -57,9 +57,6 @@ class CommunityView: UIViewController, UICollectionViewDelegate, UICollectionVie
 
     }
 }
-
-        
-
     
     
        func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
