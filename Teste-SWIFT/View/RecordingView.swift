@@ -9,12 +9,10 @@ import UIKit
 import AVFoundation
 
 
-class RecordingView: UIViewController, AVCapturePhotoCaptureDelegate {
+class RecordingView: UIViewController {
     
     @IBOutlet weak var cameraView: UIImageView!
-    
-    var photoOutput: AVCapturePhotoOutput!
-    
+        
     @IBOutlet weak var BarrinhaCarregamento: UIProgressView!
     
     var captureSession: AVCaptureSession!
@@ -23,6 +21,7 @@ class RecordingView: UIViewController, AVCapturePhotoCaptureDelegate {
     var previewLayer: AVCaptureVideoPreviewLayer!
     var timer: Timer?
     var recordingTime: Float = 0.0
+    var recordedVideoURL: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,15 +73,12 @@ class RecordingView: UIViewController, AVCapturePhotoCaptureDelegate {
         captureSession.addInput(audioInput)
         
         // 4. Setup outputs
-        photoOutput = AVCapturePhotoOutput()
         movieOutput = AVCaptureMovieFileOutput()
         
-        guard captureSession.canAddOutput(photoOutput),
-              captureSession.canAddOutput(movieOutput) else {
+        guard captureSession.canAddOutput(movieOutput) else {
             fatalError("Could not add outputs")
         }
         
-        captureSession.addOutput(photoOutput)
         captureSession.addOutput(movieOutput)
         
         // 5. Setup preview layer
@@ -116,12 +112,6 @@ class RecordingView: UIViewController, AVCapturePhotoCaptureDelegate {
         
         startTimer()
         
-    }
-    
-    
-    @IBAction func capturePhotoTapped(_ sender: UIButton) {
-        let settings = AVCapturePhotoSettings()
-        photoOutput.capturePhoto(with: settings, delegate: self)
     }
     
     private func configureProgressBar() {
@@ -172,25 +162,26 @@ class RecordingView: UIViewController, AVCapturePhotoCaptureDelegate {
                        didFinishRecordingToOutputFileAtURL outputFileURL: NSURL!,
                        fromConnections connections: [AnyObject]!,
                        error: NSError!) {
-        if error == nil {
-            // THIS LINE SAVES TO PHOTOS ALBUM
-            UISaveVideoAtPathToSavedPhotosAlbum(outputFileURL.path!, nil, nil, nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { //Pass the Video URL to the Next View
+        if segue.identifier == "NextViewSegue",
+           let nextVC = segue.destination as? UploadView {
+            nextVC.videoURL = self.recordedVideoURL
         }
     }
-}    
+}
 
 extension RecordingView: AVCaptureFileOutputRecordingDelegate {
     func fileOutput(_ output: AVCaptureFileOutput,
                     didFinishRecordingTo outputFileURL: URL,
                     from connections: [AVCaptureConnection],
                     error: Error?) {
-    }
-    
-    func photoOutput(_ output: AVCapturePhotoOutput,
-                     didFinishProcessingPhoto photo: AVCapturePhoto,
-                     error: Error?) {
-        guard let imageData = photo.fileDataRepresentation() else { return }
-        var image = UIImage(data: imageData)
+        if error == nil {
+            self.recordedVideoURL = outputFileURL
+        } else {
+            print("Recording failed: \(error!.localizedDescription)")
+        }
     }
 }
 
