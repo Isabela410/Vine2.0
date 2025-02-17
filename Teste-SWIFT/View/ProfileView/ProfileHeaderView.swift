@@ -27,9 +27,11 @@ class ProfileHeaderView: UICollectionReusableView {
         sender.isSelected.toggle()
            if sender.isSelected {
                sender.setTitle("Following", for: .normal)
+               sender.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
                sender.backgroundColor = .systemGray
            } else {
                sender.setTitle("Follow", for: .normal)
+               sender.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
                sender.backgroundColor = .systemBlue
            }
     }

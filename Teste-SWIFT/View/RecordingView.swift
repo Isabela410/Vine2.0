@@ -15,6 +15,7 @@ class RecordingView: UIViewController {
         
     @IBOutlet weak var BarrinhaCarregamento: UIProgressView!
     
+    @IBOutlet var recordingVideo: UIView!
     var captureSession: AVCaptureSession!
     var sessionOutput = AVCaptureStillImageOutput()
     var movieOutput: AVCaptureMovieFileOutput!

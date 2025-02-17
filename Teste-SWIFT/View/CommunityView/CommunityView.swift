@@ -17,7 +17,11 @@ class CommunityView: UIViewController, UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myID", for: indexPath) as! CommunityViewCell
+
+        cell.videosUser.image = UIImage(named: "user")
+
         cell.videosUser.image = UIImage(named: "vine 1")
+
         cell.videosUser.layer.cornerRadius = 5
         cell.videosUser.clipsToBounds = true
         return cell
@@ -29,6 +33,13 @@ class CommunityView: UIViewController, UICollectionViewDelegate, UICollectionVie
         super.viewDidLoad()
         CommuinityCollectionView.delegate = self
         CommuinityCollectionView.dataSource = self
+
+
+        // Registra a célula
+        let cellXib = UINib(nibName: "CommunityViewCell", bundle: nil)
+        CommuinityCollectionView.register(cellXib, forCellWithReuseIdentifier: "myID")
+
+        // Configura o layout
 
         
         // Registre a célula
@@ -43,10 +54,9 @@ class CommunityView: UIViewController, UICollectionViewDelegate, UICollectionVie
         let width = (view.frame.size.width - 4) / 3
         layout.itemSize = CGSize(width: width, height: width)
         CommuinityCollectionView.collectionViewLayout = layout
-    }
 
-        
     }
+}
     
     
        func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

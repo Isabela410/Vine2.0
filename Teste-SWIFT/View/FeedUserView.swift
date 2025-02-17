@@ -12,5 +12,6 @@ class FeedUserView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    @IBOutlet weak var userFeed: UICollectionView!
     
 }

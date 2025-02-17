@@ -58,6 +58,7 @@ class ProfileUserView: UIViewController, UICollectionViewDelegate, UICollectionV
             header.followButton.backgroundColor = .systemBlue
             header.followButton.layer.cornerRadius = 5
             header.followButton.setTitleColor(.white, for: .normal)
+            header.followButton.layer.masksToBounds = true
             header.followButton.setTitle("Follow", for: .normal)
 
             
