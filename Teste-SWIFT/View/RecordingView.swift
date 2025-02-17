@@ -11,13 +11,14 @@ import AVFoundation
 
 class RecordingView: UIViewController, AVCapturePhotoCaptureDelegate {
     
-    @IBOutlet weak var Camera: UIImageView!
+    @IBOutlet weak var cameraView: UIImageView!
     
     var photoOutput: AVCapturePhotoOutput!
     
     @IBOutlet weak var BarrinhaCarregamento: UIProgressView!
     
     var captureSession: AVCaptureSession!
+    var sessionOutput = AVCaptureStillImageOutput()
     var movieOutput: AVCaptureMovieFileOutput!
     var previewLayer: AVCaptureVideoPreviewLayer!
     var timer: Timer?
@@ -87,8 +88,8 @@ class RecordingView: UIViewController, AVCapturePhotoCaptureDelegate {
         // 5. Setup preview layer
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.videoGravity = .resizeAspectFill
-        previewLayer.frame = Camera.bounds
-        Camera.layer.addSublayer(previewLayer)
+        previewLayer.frame = cameraView.bounds
+        cameraView.layer.addSublayer(previewLayer)
         
         // 6. Start session
         DispatchQueue.global(qos: .userInitiated).async {
@@ -109,9 +110,12 @@ class RecordingView: UIViewController, AVCapturePhotoCaptureDelegate {
         // Start new recording session
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let fileUrl = paths[0].appendingPathComponent("video-\(Date().timeIntervalSince1970).mp4")
+        try? FileManager.default.removeItem(at: fileUrl)
+        
         movieOutput.startRecording(to: fileUrl, recordingDelegate: self)
         
         startTimer()
+        
     }
     
     
@@ -163,7 +167,17 @@ class RecordingView: UIViewController, AVCapturePhotoCaptureDelegate {
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         stopRecording()
     }
-}
+    
+    func captureOutput(captureOutput: AVCaptureFileOutput!,
+                       didFinishRecordingToOutputFileAtURL outputFileURL: NSURL!,
+                       fromConnections connections: [AnyObject]!,
+                       error: NSError!) {
+        if error == nil {
+            // THIS LINE SAVES TO PHOTOS ALBUM
+            UISaveVideoAtPathToSavedPhotosAlbum(outputFileURL.path!, nil, nil, nil)
+        }
+    }
+}    
 
 extension RecordingView: AVCaptureFileOutputRecordingDelegate {
     func fileOutput(_ output: AVCaptureFileOutput,

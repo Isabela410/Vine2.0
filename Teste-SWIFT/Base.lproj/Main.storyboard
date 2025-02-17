@@ -312,7 +312,7 @@
                     </view>
                     <connections>
                         <outlet property="BarrinhaCarregamento" destination="d9S-mg-0PD" id="GnA-wC-Ivg"/>
-                        <outlet property="Camera" destination="XOt-oo-hKq" id="K6M-sG-nQc"/>
+                        <outlet property="cameraView" destination="XOt-oo-hKq" id="K6M-sG-nQc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bz-zX-ZvE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
