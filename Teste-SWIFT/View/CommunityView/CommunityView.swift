@@ -17,11 +17,7 @@ class CommunityView: UIViewController, UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myID", for: indexPath) as! CommunityViewCell
-<<<<<<< HEAD
-        cell.videosUser.image = UIImage(named: "user")
-=======
         cell.videosUser.image = UIImage(named: "vine 1")
->>>>>>> e2d63b8 (Pastas de MVC organizadas)
         cell.videosUser.layer.cornerRadius = 5
         cell.videosUser.clipsToBounds = true
         return cell
@@ -33,14 +29,7 @@ class CommunityView: UIViewController, UICollectionViewDelegate, UICollectionVie
         super.viewDidLoad()
         CommuinityCollectionView.delegate = self
         CommuinityCollectionView.dataSource = self
-<<<<<<< HEAD
 
-        // Registra a célula
-        let cellXib = UINib(nibName: "CommunityViewCell", bundle: nil)
-        CommuinityCollectionView.register(cellXib, forCellWithReuseIdentifier: "myID")
-
-        // Configura o layout
-=======
         
         // Registre a célula
         let cell = UINib(nibName: "CommunityViewCell", bundle: nil)
@@ -48,17 +37,14 @@ class CommunityView: UIViewController, UICollectionViewDelegate, UICollectionVie
         let header = UINib(nibName: "CommunityHeaderViewCollectionReusableView", bundle: nil)
         CommuinityCollectionView.register(header, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CommunityHeader")
         
->>>>>>> e2d63b8 (Pastas de MVC organizadas)
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 2
         layout.minimumLineSpacing = 2
         let width = (view.frame.size.width - 4) / 3
         layout.itemSize = CGSize(width: width, height: width)
         CommuinityCollectionView.collectionViewLayout = layout
-<<<<<<< HEAD
     }
-}
-=======
+
         
     }
     
@@ -84,5 +70,4 @@ class CommunityView: UIViewController, UICollectionViewDelegate, UICollectionVie
            return CGSize(width: collectionView.frame.width,
                          height: collectionView.frame.width / 3)
        }
-   }
->>>>>>> e2d63b8 (Pastas de MVC organizadas)
+   

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0U8-wv-POU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qlQ-ga-EBU">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
@@ -310,7 +310,7 @@
         <!--Upload View-->
         <scene sceneID="aff-qD-tpS">
             <objects>
-                <viewController id="qlQ-ga-EBU" customClass="UploadView" customModule="Teste_SWIFT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UploadView" id="qlQ-ga-EBU" customClass="UploadView" customModule="Teste_SWIFT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EQl-cs-gJz">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -383,6 +383,13 @@
                             <constraint firstItem="jtc-bV-hoa" firstAttribute="bottom" secondItem="iMl-sh-myD" secondAttribute="bottom" constant="43" id="ssC-p4-HOp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="closeButton" destination="mIb-a5-JXq" id="UcZ-fR-q9X"/>
+                        <outlet property="comunityButton" destination="YPj-op-xBa" id="yHT-58-3im"/>
+                        <outlet property="feedButton" destination="Lne-ca-il2" id="RJX-i4-tQb"/>
+                        <outlet property="videoRecorded" destination="EQl-cs-gJz" id="jZY-F6-bY0"/>
+                        <outlet property="volumeButton" destination="Rog-gg-fdE" id="pbb-6u-30y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7j0-Cg-Hhv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

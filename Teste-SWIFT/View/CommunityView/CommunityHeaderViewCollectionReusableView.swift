@@ -9,20 +9,15 @@ import UIKit
 
 class CommunityHeaderViewCollectionReusableView: UICollectionReusableView {
 
-<<<<<<< HEAD
-=======
     @IBOutlet weak var photoCommunity: UIImageView!
     @IBOutlet weak var followCommunity: UIButton!
     @IBOutlet weak var countPosts: UILabel!
     @IBOutlet weak var namecomummunity: UILabel!
->>>>>>> e2d63b8 (Pastas de MVC organizadas)
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
-<<<<<<< HEAD
-=======
+
     @IBAction func followCommunity(_ sender: UIButton) {
         sender.isSelected.toggle()
            if sender.isSelected {
@@ -33,5 +28,4 @@ class CommunityHeaderViewCollectionReusableView: UICollectionReusableView {
                sender.backgroundColor = .systemBlue
            }
     }
->>>>>>> e2d63b8 (Pastas de MVC organizadas)
 }
