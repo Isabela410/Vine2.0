@@ -71,3 +71,6 @@ class CommunityView: UIViewController, UICollectionViewDelegate, UICollectionVie
                          height: collectionView.frame.width / 3)
        }
    
+#Preview{
+    UIStoryboard(name: "Main", bundle: .main).instantiateViewController(identifier: "ComunityView")
+}
