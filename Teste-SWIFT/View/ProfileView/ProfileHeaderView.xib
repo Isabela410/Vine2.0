@@ -4,37 +4,17 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-<<<<<<< HEAD
-=======
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
->>>>>>> e2d63b8 (Pastas de MVC organizadas)
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="U6b-Vx-4bR" customClass="ProfileHeaderView" customModule="Teste_SWIFT" customModuleProvider="target">
-<<<<<<< HEAD
             <rect key="frame" x="0.0" y="0.0" width="446" height="147"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7d-1R-PJU">
-                    <rect key="frame" x="129" y="17" width="84" height="20.333333333333329"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oym-Ia-t9N">
-                    <rect key="frame" x="129" y="37.333333333333336" width="71.666666666666686" height="15.666666666666664"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-=======
-            <rect key="frame" x="0.0" y="0.0" width="599" height="148"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <subviews>
->>>>>>> e2d63b8 (Pastas de MVC organizadas)
+               
+
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbI-V2-JPE">
                     <rect key="frame" x="120" y="59" width="0.0" height="0.0"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -42,12 +22,6 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-<<<<<<< HEAD
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pmV-Vu-hyR">
-                    <rect key="frame" x="129" y="58.999999999999993" width="191.33333333333337" height="15.666666666666664"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGU-Hk-b8x">
-=======
                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Gmm-h6-ccF">
                     <rect key="frame" x="163" y="100.66666666666669" width="293" height="33.333333333333343"/>
                     <subviews>
@@ -97,84 +71,32 @@
                     <rect key="frame" x="140" y="68" width="175.33333333333337" height="15.666666666666671"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGU-Hk-b8x">
->>>>>>> e2d63b8 (Pastas de MVC organizadas)
                             <rect key="frame" x="0.0" y="0.0" width="27" height="15.666666666666666"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="seguidores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgE-mY-md2">
-<<<<<<< HEAD
-                            <rect key="frame" x="35" y="0.0" width="67" height="15.666666666666666"/>
-=======
                             <rect key="frame" x="27" y="0.0" width="67" height="15.666666666666666"/>
                             <color key="backgroundColor" systemColor="systemYellowColor"/>
->>>>>>> e2d63b8 (Pastas de MVC organizadas)
                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-<<<<<<< HEAD
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comunidades" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fet-6m-CmS">
-                            <rect key="frame" x="110" y="0.0" width="81.333333333333314" height="15.666666666666666"/>
-=======
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="comunidades" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fet-6m-CmS">
                             <rect key="frame" x="94" y="0.0" width="81.333333333333314" height="15.666666666666666"/>
->>>>>>> e2d63b8 (Pastas de MVC organizadas)
                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                 </stackView>
-<<<<<<< HEAD
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDl-7G-ND8">
-                    <rect key="frame" x="129" y="91" width="150" height="34.333333333333343"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="View community"/>
-                    <connections>
-                        <action selector="ViewCommunity:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="eGI-84-Hny"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isv-cO-QfH">
-                    <rect key="frame" x="353" y="91" width="72.666666666666686" height="34.333333333333343"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Follow"/>
-                    <connections>
-                        <action selector="followUser:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="KUj-OS-S1Y"/>
-                    </connections>
-                </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Zn-6b-vIk">
-                    <rect key="frame" x="8" y="17" width="113" height="113"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="113" id="HE4-o5-uaI"/>
-                        <constraint firstAttribute="height" constant="113" id="qiI-L9-bcR"/>
-                    </constraints>
-                </imageView>
-            </subviews>
-            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
-            <constraints>
-                <constraint firstItem="pmV-Vu-hyR" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" constant="1.4210854715202004e-14" id="2Fj-Fw-auk"/>
-                <constraint firstItem="QDl-7G-ND8" firstAttribute="top" secondItem="pmV-Vu-hyR" secondAttribute="bottom" constant="16.333333333333343" id="KXi-d2-2H6"/>
-                <constraint firstItem="7Zn-6b-vIk" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="8" id="Orf-Qz-3va"/>
-                <constraint firstItem="7Zn-6b-vIk" firstAttribute="top" secondItem="X7d-1R-PJU" secondAttribute="top" id="RRQ-Xr-w9w"/>
-                <constraint firstItem="Oym-Ia-t9N" firstAttribute="leading" secondItem="X7d-1R-PJU" secondAttribute="leading" id="ReW-Bp-Zgm"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="pmV-Vu-hyR" secondAttribute="trailing" constant="125.66666666666663" id="Siy-wF-9E1"/>
-                <constraint firstItem="Oym-Ia-t9N" firstAttribute="top" secondItem="X7d-1R-PJU" secondAttribute="bottom" id="TEH-Kf-vxU"/>
-                <constraint firstItem="QDl-7G-ND8" firstAttribute="baseline" secondItem="Isv-cO-QfH" secondAttribute="baseline" id="bqa-rr-Rjm"/>
-                <constraint firstItem="X7d-1R-PJU" firstAttribute="leading" secondItem="7Zn-6b-vIk" secondAttribute="trailing" constant="8" id="cnc-rP-9L8"/>
-                <constraint firstItem="pmV-Vu-hyR" firstAttribute="leading" secondItem="Oym-Ia-t9N" secondAttribute="leading" id="ir1-qY-fVQ"/>
-                <constraint firstItem="X7d-1R-PJU" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="17" id="ni3-h5-Ywc"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="Isv-cO-QfH" secondAttribute="trailing" constant="20.333333333333314" id="q3k-PE-oFb"/>
-                <constraint firstItem="QDl-7G-ND8" firstAttribute="leading" secondItem="7Zn-6b-vIk" secondAttribute="trailing" constant="8" id="yDY-cH-7LV"/>
-=======
             </subviews>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <color key="backgroundColor" systemColor="systemBrownColor"/>
             <constraints>
                 <constraint firstItem="7Zn-6b-vIk" firstAttribute="height" secondItem="U6b-Vx-4bR" secondAttribute="height" multiplier="0.5" id="M1T-Cb-EBO"/>
                 <constraint firstItem="7Zn-6b-vIk" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="oPy-rb-hO9"/>
->>>>>>> e2d63b8 (Pastas de MVC organizadas)
             </constraints>
             <connections>
                 <outlet property="MyPhotoUser" destination="7Zn-6b-vIk" id="p4T-Lw-Hmm"/>
@@ -187,11 +109,7 @@
                 <outlet property="usernameLabel" destination="Oym-Ia-t9N" id="wFG-2w-6tA"/>
                 <outlet property="viewCommunityButton" destination="QDl-7G-ND8" id="W25-Rm-4jx"/>
             </connections>
-<<<<<<< HEAD
-            <point key="canvasLocation" x="65.648854961832058" y="-100.35211267605634"/>
-        </collectionReusableView>
-    </objects>
-=======
+
             <point key="canvasLocation" x="-185.49618320610685" y="-128.87323943661971"/>
         </collectionReusableView>
     </objects>
@@ -203,5 +121,4 @@
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
->>>>>>> e2d63b8 (Pastas de MVC organizadas)
 </document>
