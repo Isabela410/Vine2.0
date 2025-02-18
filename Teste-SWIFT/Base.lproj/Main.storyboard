@@ -133,7 +133,7 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rr7-OT-qDA" customClass="CommunityHeaderViewCollectionReusableView" customModule="Teste_SWIFT" customModuleProvider="target">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CommunityHeader" id="rr7-OT-qDA" customClass="CommunityHeaderViewCollectionReusableView" customModule="Teste_SWIFT" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="430" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
@@ -186,7 +186,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="uUa-DO-azA"/>
                     <connections>
-                        <outlet property="CommuinityCollectionView" destination="dlK-5X-B0O" id="xNW-ll-UQ5"/>
+                        <outlet property="CommuinityCollectionView" destination="dlK-5X-B0O" id="ddX-dz-I3q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yz8-lR-dJ3" sceneMemberID="firstResponder"/>
@@ -441,7 +441,7 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TgA-Jz-N5M" customClass="ProfileHeaderView" customModule="Teste_SWIFT" customModuleProvider="target">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ProfileHeader" id="TgA-Jz-N5M" customClass="ProfileHeaderView" customModule="Teste_SWIFT" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="430" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
